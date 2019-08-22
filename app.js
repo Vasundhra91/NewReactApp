@@ -25,6 +25,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 app.listen(3001);
+module.exports = app;
 //postmen softwre is used to test api request such as get post etc.
 //npm i -g-create-react-app
 //here g means globaly in my local machine adding create react app and i means install
