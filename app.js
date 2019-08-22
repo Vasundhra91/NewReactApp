@@ -43,3 +43,6 @@ app.listen(3001);
 //react return JXS basically its a html 
 // ctrl+D to select matching value and rename all
 //axios  Make XMLHttpRequests from the browser
+//"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prifix client"
+  //to build folder in heroku
+  
