@@ -1,2 +1,0 @@
-# NewReactApp
- for production
