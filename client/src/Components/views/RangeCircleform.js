@@ -57,24 +57,24 @@ render(){
      return (
     <form onSubmit={this.handleSumbmitEvent}>
         <div className='row'>
-            <div className="col-lg-4  text-center">
+            <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4  text-center">
         <label>Name
         <input type="text" id ="Name" onChange={this.handleEvent}></input></label>
         </div>
-        <div className="col-lg-4  text-center">
+        <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4  text-center">
         <label>Department
         <input type="text" id ="Department" onChange={this.handleEvent}></input></label>
         </div>
-        <div className="col-lg-4  text-center">
+        <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4  text-center">
         <label>Email
         <input type="text" id ="Email" onChange={this.handleEvent}></input></label>
         </div>
         </div>
         <div className='row'>
-            <div className="col-lg-12 text-center">
+            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12  text-center">
         <button type="submit">Submit </button></div>
         </div>
-        <div className='col-lg-12'>
+        <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12 '>
        <ViewRecords/>
           </div>
     </form>

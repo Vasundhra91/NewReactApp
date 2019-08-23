@@ -15,13 +15,13 @@ class ViewRecords extends Component {
       return (
         <div className="row"  key={maap._id} >
         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-         <div>{maap.name}</div>
+         {maap.name}
          </div>
          <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-         <div>{maap.department}</div>
+        {maap.department}
            </div>
            <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-         <div>{maap.email}</div>
+         {maap.email}
            </div>
         </div>
       )}
@@ -31,13 +31,13 @@ class ViewRecords extends Component {
          <h1>Customer Details</h1>
         <div className="row" >
         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-           <div><b>Name</b></div>
+           <b>Name</b>
            </div>
            <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-           <div><b>Department</b></div>
+           <b>Department</b>
              </div>
              <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-           <div><b>Email</b></div>
+          <b>Email</b>
              </div>
           </div>
         {maaplist }
