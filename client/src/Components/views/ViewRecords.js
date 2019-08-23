@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+//import axios from 'axios'
 class ViewRecords extends Component {
   state = {MaapData: []}
 
@@ -30,14 +30,14 @@ class ViewRecords extends Component {
       <div>
          <h1>Customer Details</h1>
         <div className="row" >
-          <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-           <div>Name</div>
+        <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+           <div><b>Name</b></div>
            </div>
            <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-           <div>Department</div>
+           <div><b>Department</b></div>
              </div>
              <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-           <div>Email</div>
+           <div><b>Email</b></div>
              </div>
           </div>
         {maaplist }

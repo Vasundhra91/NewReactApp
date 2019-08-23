@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios'
+import ViewRecords from'./ViewRecords';
 
 class Maapform extends React.Component{
     state ={
@@ -73,6 +74,9 @@ render(){
             <div className="col-lg-12 text-center">
         <button type="submit">Submit </button></div>
         </div>
+        <div className='col-lg-12'>
+       <ViewRecords/>
+          </div>
     </form>
   )}
 
