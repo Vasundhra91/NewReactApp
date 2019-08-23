@@ -57,6 +57,11 @@ render(){
      return (
     <form onSubmit={this.handleSumbmitEvent}>
         <div className='row'>
+            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h2>Create Records</h2>
+            </div>
+        </div>
+        <div className='row'>
             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4  text-center">
         <label>Name
         <input type="text" id ="Name" onChange={this.handleEvent}></input></label>
