@@ -1,10 +1,17 @@
 import React from 'react';
-import ViewRecords from'./ViewRecords';
+import RangeCircle from './grid'
 class Maapform extends React.Component{
+    
+    componentDidMount() {
+        fetch('/rangecircles').then(res=> res.json())
+         .then(MaapData => this.setState({ MaapData }));
+      }
+
     state ={
         name  : null,
         department : null,
-        email : null
+        email : null,
+        MaapData: []
     }
 handleEvent=(e)=>
 {
@@ -28,6 +35,7 @@ const newUser={
     headers: {
         'Content-Type': 'application/json'
     }}).then(res => res.json())
+    .then(MaapData => this.setState({ MaapData }))
     .then(response => console.log('Success:', JSON.stringify(response)))
     .catch(error => console.error('Error:', error))
 }
@@ -36,7 +44,7 @@ render(){
      return (
     <form onSubmit={this.handleSumbmitEvent} method="post">
         <div className='row'>
-       <div className='col-lg-12'><h2>Range Master</h2> </div>
+       <div className='col-lg-12 col-xl-12 col-md-12 col-xs-12'><h2>Range Master</h2> </div>
      </div>
         <div className='row'>
             <div className="col-lg-4  text-center">
@@ -53,12 +61,12 @@ render(){
         </div>
         </div>
         <div className='row'>
-            <div className="col-lg-12 text-center">
+            <div className="col-lg-12 col-xl-12 col-md-12 col-xs-12 text-center">
         <button type="submit">Submit </button></div>
         </div>
         <div className='row'>
-       <div className='col-lg-12'>
-       <ViewRecords/>
+       <div className='col-lg-12 col-xl-12 col-md-12 col-xs-12'>
+       <RangeCircle Maapdetails={this.state.MaapData}/>
           </div>
      </div>
     </form>

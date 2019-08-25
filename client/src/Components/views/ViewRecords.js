@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import axios from 'axios'
+import RangeCircle from './grid'
 class ViewRecords extends Component {
   state = {MaapData: []}
 
@@ -9,40 +9,12 @@ class ViewRecords extends Component {
   }
 
   render() {
-
-    const maaplist= this.state.MaapData.map(maap=>{
-      return (
-        <div className="row"  key={maap._id} >
-        <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-         {maap.name}
-         </div>
-         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-        {maap.department}
-           </div>
-           <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-         {maap.email}
-           </div>
-        </div>
-      )}
-     )
-     return(
+    return(
       <div>
-         <h1>Customer Details</h1>
-        <div className="row" >
-        <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-           <b>Name</b>
-           </div>
-           <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-           <b>Department</b>
-             </div>
-             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-          <b>Email</b>
-             </div>
-          </div>
-        {maaplist }
-      </div>
-    )
-  }
+        <RangeCircle Maapdetails={this.state.MaapData}/>
+      
+        </div>
+    )}
 }
 
 export default ViewRecords;
