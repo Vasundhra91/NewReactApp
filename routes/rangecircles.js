@@ -8,4 +8,14 @@ router.get('/', function(req, res, next) {
         res.json(datavalue);
     })
  })
+ router.post('/', function(req,res){
+    MaapModel.create(req.body).then(function(data){
+        MaapModel.find({},function(error,datavalue){
+            if (error){throw error} 
+            //res.render('\home',{data:datavalue});
+            res.json(datavalue);
+        })
+    });
+})
+
  module.exports= router;

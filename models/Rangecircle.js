@@ -4,13 +4,16 @@ const Schema = mongoose.Schema;
 var modelschema = new Schema({
     name:{
          type:String,
-         required:true},
+       //  required:true
+     },
     department:{
          type:String,
-         required:true},
+         //required:true
+     },
     email:{
          type:String,
-         required:true}
+     //    required:true
+}
  })
 
 module.exports = Maap =mongoose.model('Maap',modelschema);

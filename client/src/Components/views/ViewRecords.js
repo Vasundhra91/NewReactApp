@@ -6,7 +6,6 @@ class ViewRecords extends Component {
   componentDidMount() {
     fetch('/rangecircles').then(res=> res.json())
      .then(MaapData => this.setState({ MaapData }));
-        console.log(this.state.MaapData)
   }
 
   render() {
