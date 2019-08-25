@@ -19,10 +19,11 @@ this.setState({
     [e.target.id]: e.target.value
 })
 }
+
 handleSumbmitEvent=(e)=>
 {
 e.preventDefault();
-console.log(this.state);
+
 const newUser={
     name:this.state.Name,
     email:this.state.Email,
@@ -38,6 +39,7 @@ const newUser={
     .then(MaapData => this.setState({ MaapData }))
     .then(response => console.log('Success:', JSON.stringify(response)))
     .catch(error => console.error('Error:', error))
+ 
 }
 
 render(){
@@ -47,15 +49,15 @@ render(){
        <div className='col-lg-12 col-xl-12 col-md-12 col-xs-12'><h2>Range Master</h2> </div>
      </div>
         <div className='row'>
-            <div className="col-lg-4  text-center">
+            <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-xs-4  text-center">
         <label>Name
         <input type="text" id ="Name" onChange={this.handleEvent}></input></label>
         </div>
-        <div className="col-lg-4  text-center">
+        <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-xs-4  text-center">
         <label>Department
         <input type="text" id ="Department" onChange={this.handleEvent}></input></label>
         </div>
-        <div className="col-lg-4  text-center">
+        <div className="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-xs-4  text-center">
         <label>Email
         <input type="text" id ="Email" onChange={this.handleEvent}></input></label>
         </div>
