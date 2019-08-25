@@ -15,7 +15,19 @@ router.get('/', function(req, res, next) {
             //res.render('\home',{data:datavalue});
             res.json(datavalue);
         })
-    });
-})
+    })
+});
+
+router.delete('/:id', function(req,res){
+   MaapModel.findByIdAndRemove({_id: req.params.id}, 
+    function(error, data){
+        MaapModel.find({},function(error,datavalue){
+            if (error){throw error} 
+            //res.render('\home',{data:datavalue});
+            res.json(datavalue);
+        })
+   })
+    
+});
 
  module.exports= router;

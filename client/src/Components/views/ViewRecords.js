@@ -7,12 +7,20 @@ class ViewRecords extends Component {
     fetch('/rangecircles').then(res=> res.json())
      .then(MaapData => this.setState({ MaapData }));
   }
+  DeleteMaapdetails=(_id)=>
+  { 
+   
+      fetch( '/rangecircles/'+_id, {
+        method: 'delete'
+      }).then(res => res.json())
+      
+  }
+    
 
   render() {
     return(
       <div>
-        <RangeCircle Maapdetails={this.state.MaapData}/>
-      
+        <RangeCircle Maapdetails={this.state.MaapData} DeleteMaapdetails={this.DeleteMaapdetails} />
         </div>
     )}
 }
