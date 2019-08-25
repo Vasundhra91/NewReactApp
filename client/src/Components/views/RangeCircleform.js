@@ -24,7 +24,7 @@ const newUser={
     email:this.state.email
   }
   console.log(newUser);
-axios.post('/rangecircles',newUser)
+axios.post('/postRequests',newUser)
 
 // axios.post('/postRequests', {
 //     data:this.state,
