@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 const MaapModel = require(__dirname+'../../models/Rangecircle')
 
-Route.post('/postRequests',urlencodedParser, function(req,res){
+Route.post('/',urlencodedParser, function(req,res){
 
     //console.log(res.body);
     // urlencodedParser is to midware to give aceess to req.body to access the form data ;

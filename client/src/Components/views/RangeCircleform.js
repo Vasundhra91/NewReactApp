@@ -4,10 +4,9 @@ import ViewRecords from'./ViewRecords';
 
 class Maapform extends React.Component{
     state ={
-        
-        Name  : null,
-        Department : null,
-        Email : null
+        name  : null,
+        department : null,
+        email : null
     }
 handleEvent=(e)=>
 {
@@ -18,13 +17,14 @@ this.setState({
 handleSumbmitEvent=(e)=>
 {
 e.preventDefault();
-console.log(this.state);
+
 const newUser={
-    Name:this.state.Name,
-    Email:this.state.Email,
-    Department:this.state.Department,
+    name:this.state.name,
+    department:this.state.department,
+    email:this.state.email
   }
-axios.post('http://localhost:5000/postRequests',newUser)
+  console.log(newUser);
+axios.post('/rangecircles',newUser)
 
 // axios.post('/postRequests', {
 //     data:this.state,
