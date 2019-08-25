@@ -23,7 +23,6 @@ const newUser={
     department:this.state.department,
     email:this.state.email
   }
-  console.log(newUser);
 axios.post('/postRequests',newUser)
 
 // axios.post('/postRequests', {
