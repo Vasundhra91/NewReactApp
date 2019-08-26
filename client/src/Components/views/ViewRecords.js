@@ -13,6 +13,7 @@ class ViewRecords extends Component {
       fetch( '/rangecircles/'+_id, {
         method: 'delete'
       }).then(res => res.json())
+      .then(MaapData => this.setState({ MaapData }));
       
   }
     
