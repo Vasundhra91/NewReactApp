@@ -8,17 +8,17 @@ class ViewRecords extends Component {
      .then(MaapData => this.setState({ MaapData }));
   }
   DeleteMaapdetails=(_id)=>
-  { 
-   
-      fetch( '/rangecircles/'+_id, {
-        method: 'delete'
-      }).then(res => res.json())
-      .then(MaapData => this.setState({ MaapData }));
-      
-  }
-    
-
-  render() {
+  {   fetch('/rangecircles/'+_id, {
+    method: 'delete',
+    headers: {
+        'Content-Type': 'application/json'
+    }}).then(res => res.json())
+    .then(MaapData => this.setState({ MaapData }))
+    .then(response => console.log('Success:', JSON.stringify(response)))
+    .catch(error => console.error('Error:', error))
+ 
+} 
+render() {
     return(
       <div>
         <RangeCircle Maapdetails={this.state.MaapData} DeleteMaapdetails={this.DeleteMaapdetails} />
