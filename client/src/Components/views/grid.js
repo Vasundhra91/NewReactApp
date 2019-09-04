@@ -3,7 +3,7 @@ import React from 'react';
     const RangeCircle = ({Maapdetails ,DeleteMaapdetails})=> {
     const maaplist= Maapdetails.map(maap=>{
         return (
-            <div className="row">
+            <div className="row" key ={maap._id}>
             <div className="col-lg-3 col-xl-3 col-md-3 col-sm-3 col-xs-3">
              <div>{maap.name}</div>
              </div>
